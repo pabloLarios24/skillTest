@@ -55,7 +55,7 @@ let styles = StyleSheet.create({
     },
     input:{
         ...fontStyles.h3Bold,
-        color: colors.secondaryBlack,
+        color: colors.gray,
     },
     subTitle:{ 
         textAlign: "center", 

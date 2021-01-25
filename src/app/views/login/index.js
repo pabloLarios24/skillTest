@@ -10,7 +10,6 @@ import {
 } from 'react-native'
 import { moderateScale } from 'react-native-size-matters';
 import KeyboardSpacer from 'react-native-keyboard-spacer';
-import Spinner from 'react-native-loading-spinner-overlay';
 import { Actions } from 'react-native-router-flux';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -33,7 +32,7 @@ export default class Login extends React.Component{
         const { email, password } = this.state;
         if(email && password){
             if(email === "lariosarci@hotmail.com" && password === "prueba"){
-            
+                Actions.Home()
             }else{
                 Alert.alert("Error.", "Correo o contraseña incorrectos.")
             }
@@ -77,13 +76,12 @@ export default class Login extends React.Component{
                             style={styles.container}
                         >
                             <View
-                                style={themeClasses.containerInput}
+                                style={styles.containerInput}
                                 removeTop
                             >
                                 <TextInput 
                                     style={styles.input}
                                     placeholder={"Correo electrónico"}
-                                    placeholderTextColor={colors.grisHex}
                                     onChangeText={(email)=>{
                                         this.setState({email})
                                     }}
@@ -98,7 +96,6 @@ export default class Login extends React.Component{
                                 <TextInput 
                                     style={styles.input}
                                     placeholder={"Contraseña"}
-                                    placeholderTextColor={colors.grisHex}
                                     onChangeText={(password)=>{
                                         this.setState({password})
                                     }}
