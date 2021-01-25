@@ -1,10 +1,10 @@
 # React Native skill-test by Pablo Larios
 
-Aqui muestro mi app echa en react-native utilizando componentes con hooks y otros con clases, no entendí muy bien lo de paginación asi que puse un infinityScroll con flatList.
+Aqui muestro mi app hecha en react-native utilizando componentes con hooks y otros con clases, no entendí muy bien lo de paginación asi que puse un infinityScroll con flatList.
 
 ## Pasos para correr el proyecto
 
-- Necesitaremos contar con el cli de React-Native, si no lo tienes te dejo la liga[prototipo](https://reactnative.dev/docs/environment-setup)
+- Necesitaremos contar con el cli de React-Native, si no lo tienes te dejo la liga [react-native doc](https://reactnative.dev/docs/environment-setup)
 - Ubicarnos dentro de la raíz del proyecto y ejecutar:
     - npm install
 - Si queremos correr en ios( necesitamos una mac )
@@ -15,7 +15,7 @@ Aqui muestro mi app echa en react-native utilizando componentes con hooks y otro
     -   Dentro de xcode ejecutar play y listo
 - Si queremos correr en android
     -   Abrir la ultima version de Android Studio
-    -   Abrir projecto android ( abrir la carpeta android que se encuentra en skillTest/android) desde la opcion "Open an exist project)
+    -   Abrir projecto android ( abrir la carpeta android que se encuentra en skillTest/android) desde la opcion "Open an exist project
     -   Esperar a que termine el build.
     -   Ejecturar run app
 
