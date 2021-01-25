@@ -12,9 +12,6 @@ const themeClasses = require('../../styles').themeClasses;
 const fontStyles = require('../../styles').fontStyles;
 const colors = require('../../styles').colors;
 
-
-
-
 export default class DeatilsCharacter extends Component {
      constructor(props) {
          super(props)
@@ -26,7 +23,7 @@ export default class DeatilsCharacter extends Component {
     }
 
     render() {
-        const { item } =  this.props;
+        const { item, like } =  this.props;
         return (
             <View style={[themeClasses.container]}>
                 {/* HeaderBar */}
@@ -133,17 +130,11 @@ export default class DeatilsCharacter extends Component {
                     <View 
                         style={styles.containerLike}
                     >
-                        <TouchableOpacity
-                            onPress={()=>{
-                            }}
-                        >
-
-                            <Icon 
-                                type={"Entypo"} 
-                                name="heart-outlined" 
-                                style={[styles.iconLikeNot ]} 
-                            />
-                        </TouchableOpacity>
+                        <Icon 
+                            type={"Entypo"} 
+                            name={like ? "heart" : "heart-outlined"} 
+                            style={like ? styles.iconLike : styles.iconLikeNot } 
+                        />
                     </View>
                 </View>
         </View>

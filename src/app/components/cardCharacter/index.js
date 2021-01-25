@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import {View,Text,TouchableOpacity, Image} from 'react-native'
 import {moderateScale} from 'react-native-size-matters'
 import { Icon } from 'native-base';
@@ -11,15 +11,17 @@ import Shadow from '../dynamicShadow'
 //import styles
 const fontStyles = require('../../styles').fontStyles;
 const colors = require('../../styles').colors;
-const themeClasses = require('../../styles').themeClasses;
 const styles = require('./styles').styles;
 
-const CardCharacter = ({ name, kind, status, type, gender, img, item,animationLeft }) =>{
+function CardCharacter ({ name, kind, status, type, gender, img, item,animationLeft }){
+    const [like, setLike] = useState(false);
+ 
     return(
         <TouchableOpacity 
             onPress={()=>{
                 Actions.DetailsCharacter({
-                    item: item
+                    item: item,
+                    like: like
                 })
             }}
         >
@@ -111,15 +113,15 @@ const CardCharacter = ({ name, kind, status, type, gender, img, item,animationLe
                             style={styles.containerLike}
                         >
                             <TouchableOpacity
-                                onPress={()=>{
-                                   
+                               onPress={()=>{
+                                    setLike(true)
                                 }}
                             >
 
                                 <Icon 
                                     type={"Entypo"} 
-                                    name="heart-outlined" 
-                                    style={[styles.iconLikeNot ]} 
+                                    name={like ? "heart" : "heart-outlined"} 
+                                    style={like ? styles.iconLike : styles.iconLikeNot } 
                                 />
                             </TouchableOpacity>
                         </View>

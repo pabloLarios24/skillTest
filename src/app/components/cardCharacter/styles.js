@@ -27,8 +27,7 @@ let styles = StyleSheet.create({
     },
     containerImage:{
         height: "100%",
-        width: moderateScale(100),
-        backgroundColor:"red"
+        width: moderateScale(100)
     },
     containerText:{
         height: "100%",
