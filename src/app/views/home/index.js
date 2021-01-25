@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, FlatList, TouchableOpacity, TextInput, Dimensions } from 'react-native'
+import { View, Text, FlatList, TouchableOpacity, TextInput, Dimensions, Platform } from 'react-native'
 import { moderateScale } from 'react-native-size-matters'
 import { Icon } from 'native-base';
 import { Actions } from 'react-native-router-flux';
@@ -223,7 +223,7 @@ export default class Home extends Component {
                         data={this.state.characters}
                         onEndReached={this._handleLoadMore}
                         renderItem={this._renderItem}
-                        onEndReachedThreshold={0}
+                        onEndReachedThreshold={Platform.OS === "ios" ? 0 : .5}
                         refreshing={this.state.refreshing}
                         onRefresh={this._handleRefresh}
                     />

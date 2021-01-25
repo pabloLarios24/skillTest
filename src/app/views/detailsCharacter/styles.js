@@ -11,7 +11,7 @@ const fontStyles = require('../../styles').fontStyles
 let styles = StyleSheet.create({
     containerImage:{
         width: "100%",
-        height: moderateScale(350)
+        height: dimensions.height * .45
     },
     containerText:{
         width: "100%",
